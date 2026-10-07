@@ -1,0 +1,23 @@
+=== Opening state ===
+Savings  SAV-1001 balance:     500.00   (minimum 100.00)
+Current  CUR-2001 balance:     200.00   (overdraft limit 300.00)
+Savings  SAV-1002 balance:    1000.00   (minimum 100.00)
+Current  CUR-2002 balance:      50.00   (overdraft limit 100.00)
+
+=== Withdrawing 450.00 from every account (via Account reference) ===
+[SAV-1001] SAVINGS withdrawal of 450.00 REJECTED: balance would fall below the minimum of 100.00 (current balance 500.00).
+[CUR-2001] CURRENT withdrew 450.00. New balance: -250.00  (OVERDRAFT, within limit)
+[SAV-1002] SAVINGS withdrew 450.00. New balance: 550.00
+[CUR-2002] CURRENT withdrawal of 450.00 REJECTED: would exceed the overdraft limit of 100.00 (current balance 50.00).
+
+=== End of month for every account (via Account reference) ===
+[SAV-1001] SAVINGS month-end: interest of 2.50 added (0.5%). New balance: 502.50
+[CUR-2001] CURRENT month-end: maintenance fee of 5.00 deducted. New balance: -255.00
+[SAV-1002] SAVINGS month-end: interest of 2.75 added (0.5%). New balance: 552.75
+[CUR-2002] CURRENT month-end: maintenance fee of 5.00 deducted. New balance: 45.00
+
+=== Final balances ===
+Savings  SAV-1001 balance:     502.50   (minimum 100.00)
+Current  CUR-2001 balance:    -255.00   (overdraft limit 300.00)
+Savings  SAV-1002 balance:     552.75   (minimum 100.00)
+Current  CUR-2002 balance:      45.00   (overdraft limit 100.00)
